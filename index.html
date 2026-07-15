@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Pipeline // Agentic Automation Architect Sprint</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<header class="app-header">
+  <div class="header-left">
+    <span class="logo-bracket">[</span>
+    <h1>CAREER<span class="accent-teal">_</span>PIPELINE</h1>
+    <span class="logo-bracket">]</span>
+  </div>
+  <div class="header-right">
+    <div class="header-stat">
+      <span class="header-stat-label">TARGET_ROLE</span>
+      <span class="header-stat-value">Agentic Automation Architect</span>
+    </div>
+    <div class="header-stat">
+      <span class="header-stat-label">SPRINT_WINDOW</span>
+      <span class="header-stat-value" id="sprint-window">2026-07-14 → 2026-10-12</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- PIPELINE DIAGRAM -->
+  <section class="panel pipeline-panel">
+    <div class="panel-title"><span class="panel-tag">01</span> PIPELINE_STATUS</div>
+    <div class="pipeline-diagram" id="pipeline-diagram">
+      <!-- nodes injected by JS -->
+    </div>
+    <div class="pipeline-meta">
+      <div class="meta-block">
+        <span class="meta-label">TODAY</span>
+        <span class="meta-value" id="today-date">—</span>
+      </div>
+      <div class="meta-block">
+        <span class="meta-label">ACTIVE_PHASE</span>
+        <span class="meta-value" id="active-phase-name">—</span>
+      </div>
+      <div class="meta-block">
+        <span class="meta-label">PHASE_DAY</span>
+        <span class="meta-value" id="phase-day">—</span>
+      </div>
+      <div class="meta-block">
+        <span class="meta-label">DAYS_REMAINING (PHASE)</span>
+        <span class="meta-value accent-amber" id="phase-days-remaining">—</span>
+      </div>
+      <div class="meta-block">
+        <span class="meta-label">DAYS_REMAINING (SPRINT)</span>
+        <span class="meta-value accent-amber" id="sprint-days-remaining">—</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="two-col">
+    <!-- DAILY TASKS -->
+    <section class="panel">
+      <div class="panel-title"><span class="panel-tag">02</span> DAILY_EXEC_QUEUE <span class="panel-sub" id="daily-queue-sub"></span></div>
+      <ul class="task-list" id="daily-task-list"></ul>
+      <div class="task-progress-row">
+        <div class="task-progress-bar"><div class="task-progress-fill" id="daily-progress-fill"></div></div>
+        <span class="task-progress-label" id="daily-progress-label">0/3</span>
+      </div>
+    </section>
+
+    <!-- STREAK / TOTALS -->
+    <section class="panel">
+      <div class="panel-title"><span class="panel-tag">03</span> RUNTIME_METRICS</div>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <span class="metric-value" id="streak-current">0</span>
+          <span class="metric-label">CURRENT_STREAK (days)</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value" id="streak-longest">0</span>
+          <span class="metric-label">LONGEST_STREAK (days)</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value" id="total-tasks">0</span>
+          <span class="metric-label">TASKS_COMPLETED (all-time)</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value" id="days-elapsed">0</span>
+          <span class="metric-label">SPRINT_DAY / 90</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- COUNTERS -->
+  <section class="panel">
+    <div class="panel-title"><span class="panel-tag">04</span> CUMULATIVE_COUNTERS</div>
+    <div class="counter-row" id="counter-row"></div>
+  </section>
+
+  <!-- MILESTONES -->
+  <section class="panel">
+    <div class="panel-title"><span class="panel-tag">05</span> PHASE_MILESTONES</div>
+    <div class="milestone-tabs" id="milestone-tabs"></div>
+    <ul class="task-list milestone-list" id="milestone-list"></ul>
+  </section>
+
+  <!-- TIP -->
+  <section class="panel tip-panel">
+    <div class="panel-title"><span class="panel-tag">06</span> DAILY_IMPROVEMENT_TIP</div>
+    <p class="tip-text" id="tip-text">—</p>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  <span>local storage // private to this browser</span>
+  <button id="reset-btn" class="reset-btn">RESET_ALL_DATA</button>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
